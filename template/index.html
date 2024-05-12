@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stroke Prediction Model</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1 class='container-heading'><span class="heading_font">Do you have Stroke?</span></h1>
+    </div>
+
+    <div class="ml-container">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <br>
+            <br>
+            <h3>Gender</h3>
+            <select id="first" class="form-input align-center" name="gender">
+                <option value="">Select Gender</option>
+                <option value="1">Female</option>
+                <option value="0">Male</option>
+            </select>
+            <br>
+            <h3>Age</h3>
+            <input id="second" name="age" placeholder="in Year" required="required">
+            <br>
+            <h3>Marriage Status</h3>
+            <select id="eight" class="form-input align-center" name="ever_married">
+                <option value="1">Married</option>
+                <option value="0">Unmarried</option>
+            </select>
+            <br>
+            <h3>Residence Type</h3>
+            <select id="ninth" class="form-input align-center" name="Residence_type">
+                <option value="">Residence Type</option>
+                <option value="1">Urban</option>
+                <option value="0">Rural</option>
+            </select>
+            <br>
+            <h3>Average Glucose Level</h3>
+            <input id="seventh" name="avg_glucose_level" placeholder="in Blood" required="required">
+            <br>
+            <h3>BMI</h3>
+            <input id="eight" name="bmi" placeholder="Body Mass Index" required="required">
+            <br>
+            <h3>Work Type</h3>
+            <select id="ninth" class="form-input align-center" name="work_type">
+                <option value="none">Worktype</option>
+                <option value="Private">Private</option>
+                <option value="Self_employed">Self Employed</option>
+                <option value="Govt_job">Govt Job</option>
+                <option value="children">Children</option>
+            </select>
+            <br>
+            <h3>Smoking Status</h3>
+            <select id="tenth" class="form-input align-center" name="smoking_status">
+                <option value="none">Smoking</option>
+                <option value="formerly_smoked">Formerly Smokes</option>
+                <option value="never_smoked">Never Smokes</option>
+                <option value="Smokes">Smokes</option>
+                <option value="Unknown">Unknown</option>
+            </select>
+            <h3>Are you suffering with hypertension? <input id="third" type="checkbox" name="hypertension"  required="required"></h3>
+            <h3>Are you suffering with heart disease?<input id="fourth" type="checkbox" name="heart_disease" required="required"></h3>
+            <br>
+            <button id="sub" type="submit ">Submit</button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p class='footer-description'>©2023 VABJ</p>
+
+        </form>
+    </div>
+
+
+
+
+<style>
+
+/* Background Image */
+body
+{
+background-image:url("bg.png");
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+
+}
+
+/* Color */
+body{
+	font-family: Arial, Helvetica,sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* Heading Font */
+.container-heading{
+    margin: 0;
+}
+
+.heading_font{
+    color: red;
+	font-family: 'Pacifico', cursive;
+	font-size: 80px;
+	font-weight: normal;
+}
+
+
+
+/* Box */
+        #first {
+            height: 30px;
+            width: 180px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #second {
+            height: 25px;
+            width: 120px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            height: 25px;
+            width: 70px;
+            font-size: 20px;
+        }
+
+        #fourth {
+            height: 25px;
+            width: 70px;
+            font-size: 20px;
+        }
+
+        #fifth {
+            height: 25px;
+            width: 180px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #sixth {
+            height: 25px;
+            width: 220px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #seventh {
+            height: 25px;
+            width: 140px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #eight {
+            height: 25px;
+            width: 200px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #ninth {
+            height: 30px;
+            width: 160px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #tenth {
+            height: 30px;
+            width: 160px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+
+
+/* Submit Button */
+#sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</style>
+
+
+</body>
+
+</html>
+
+
